@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
+//    return view("administrator.include.master") ;
     return view('welcome');
+});
+
+Route::get("/test", function (){
+    return view("administrator.home") ;
 });
