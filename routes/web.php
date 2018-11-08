@@ -19,3 +19,16 @@ Route::get('/', function () {
 Route::get("/test", function (){
     return view("administrator.home") ;
 });
+
+
+Route::get("/t", function (){
+    // These code snippets use an open-source library. http://unirest.io/php
+    $response = Unirest\Request::get("https://myanmarunicorn-bhawlone-v1.p.mashape.com/countries",
+        array(
+            "X-Mashape-Key" => "QNYzZqmaX9mshOIUmN4UbyMqefuFp1u8BVZjsnQ3sVj6AiUcSB",
+            "Accept" => "application/json"
+        )
+    );
+
+    return $response->body->data ;
+});

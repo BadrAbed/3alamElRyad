@@ -305,6 +305,13 @@ class ComposerStaticInit45fae3a6458054611e40520013f0729c
     );
 
     public static $prefixesPsr0 = array (
+        'U' => 
+        array (
+            'Unirest\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/mashape/unirest-php/src',
+            ),
+        ),
         'P' => 
         array (
             'Prophecy\\' => 
@@ -350,6 +357,7 @@ class ComposerStaticInit45fae3a6458054611e40520013f0729c
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\ExpectedResult' => __DIR__ . '/../..' . '/app/ExpectedResult.php',
         'App\\Group' => __DIR__ . '/../..' . '/app/Group.php',
+        'App\\Http\\Controllers\\Administrator\\NationalityController' => __DIR__ . '/../..' . '/app/Http/Controllers/Administrator/NationalityController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
@@ -3702,6 +3710,11 @@ class ComposerStaticInit45fae3a6458054611e40520013f0729c
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+        'Unirest\\Exception' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Exception.php',
+        'Unirest\\Method' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Method.php',
+        'Unirest\\Request' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Request.php',
+        'Unirest\\Request\\Body' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Request/Body.php',
+        'Unirest\\Response' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Response.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
         'Whoops\\Exception\\Formatter' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Formatter.php',
