@@ -20,3 +20,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(["namespace" => "CacheData"], function () {
     Route::post("cacheCountry","CountryController@fillNationality");
 });
+
+Route::group(["namespace" => "Api"],function (){
+    Route::post("/Leagues","LeaguesController@index");
+    Route::post("/LeagueDetails","LeaguesController@show");
+    Route::post("/standings","LeaguesController@standing");
+});
