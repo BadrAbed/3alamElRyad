@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Leagues;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Validator;
@@ -10,14 +11,15 @@ class LeaguesController extends Controller
 {
     public function index(){
         // These code snippets use an open-source library. http://unirest.io/php
-        $response = \Unirest\Request::get("https://myanmarunicorn-bhawlone-v1.p.mashape.com/competitions",
-            array(
-                "X-Mashape-Key" => "QNYzZqmaX9mshOIUmN4UbyMqefuFp1u8BVZjsnQ3sVj6AiUcSB",
-                "Accept" => "application/json"
-            )
-        );
+//        $response = \Unirest\Request::get("https://myanmarunicorn-bhawlone-v1.p.mashape.com/competitions",
+//            array(
+//                "X-Mashape-Key" => "QNYzZqmaX9mshOIUmN4UbyMqefuFp1u8BVZjsnQ3sVj6AiUcSB",
+//                "Accept" => "application/json"
+//            )
+//        );
 
-        return response(["status" => true , "message" => "All leagues and Champions at all of the world ", "result" => $response->body->data]);
+        $response = Leagues::all();
+        return response(["status" => true , "message" => "All leagues and Champions at all of the world ", "result" => $response]);
     }
 
     public function show(){
