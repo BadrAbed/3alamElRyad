@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Resources\StandingCollection;
 use App\Leagues;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -62,7 +63,27 @@ class LeaguesController extends Controller
                 )
             );
 
-            return response(["status" => true, "message" => " leagues or  Champions standing ", "result" => $response->body->data->standings]);
+            $all_standings = $response->body->data->standings;
+            $standings = [] ;
+            foreach ($all_standings as $standing){
+                
+                $obj = [
+                    "position" => $standing->position,
+                    "team_name" => $standing->team->name ,
+                    "played" => $standing->played ,
+                    "wins" => $standing->wins,
+                    "draws"=> $standing->draws ,
+                    "losses" => $standing->losses ,
+                    "goalsFor" => $standing->goalsFor ,
+                    "goalsAgainst"=> $standing->goalsAgainst,
+                    "points"=> $standing->points ,
+                    "result"=> $standing->result
+                ];
+                    
+                array_push($standings,$obj);
+            }
+
+            return response(["status" => true, "message" => " leagues or  Champions standing ", "result" => $standings]);
         }
     }
 }
